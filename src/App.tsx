@@ -15,8 +15,8 @@ let data: Restaurant = {
     menu: [{name: "rose pasta", price: 2000, category: "pasta"}]
 }
 const App: React.FC = () => {
-    // 데이터를 useState에 넣기
-    const [myRestaurant, setMyRestaurant] = useState(data)
+    // 데이터를 useState에 넣기 useState<제네릭>
+    const [myRestaurant, setMyRestaurant] = useState<Restaurant>(data)
     return (
         <div className="App">
             <Store info={myRestaurant}/>
