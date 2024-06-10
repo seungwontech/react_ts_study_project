@@ -5,8 +5,10 @@ interface OwnProps {
     info: Restaurant
 }
 
-const Store: React.FC<OwnProps> = (props) => {
-    return (<div>Store</div>)
+const Store: React.FC<OwnProps> = ({info}) => {
+    return (
+        <div>{info.name}</div>
+    )
 }
 
 export default Store
