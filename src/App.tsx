@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Store from "./Store";
 import {Restaurant} from "./model/resturant";
 
-let data:Restaurant = {
+let data: Restaurant = {
     name: "승원네 식당",
     category: "western",
     address: {
@@ -15,9 +15,11 @@ let data:Restaurant = {
     menu: [{name: "rose pasta", price: 2000, category: "pasta"}]
 }
 const App: React.FC = () => {
+    // 데이터를 useState에 넣기
+    const [myRestaurant, setMyRestaurant] = useState(data)
     return (
         <div className="App">
-            <Store info={data}/>
+            <Store info={myRestaurant}/>
         </div>
     );
 }
