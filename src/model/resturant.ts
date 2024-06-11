@@ -19,3 +19,5 @@ export type Menu = {
 
 // Address 에서 zipCode 빼고 싶을 때 Omit<>
 export type AddressWithoutZipCode = Omit<Address, 'zipCode'>
+// Restaurant 에서 category만 가져오고 싶을 때 Pick<>
+export type RestaurantOnlyCategory = Pick<Restaurant, 'category'>
