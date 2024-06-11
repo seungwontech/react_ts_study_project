@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Store from "./Store";
-import {Restaurant} from "./model/resturant";
+import {Address, Restaurant} from "./model/resturant";
 
 let data: Restaurant = {
     name: "승원네 식당",
@@ -17,9 +17,12 @@ let data: Restaurant = {
 const App: React.FC = () => {
     // 데이터를 useState에 넣기 useState<제네릭>
     const [myRestaurant, setMyRestaurant] = useState<Restaurant>(data)
+    const changeAddress = (address: Address) => {
+        setMyRestaurant({...myRestaurant, address})
+    }
     return (
         <div className="App">
-            <Store info={myRestaurant}/>
+            <Store info={myRestaurant} changeAddress={changeAddress}/>
         </div>
     );
 }
