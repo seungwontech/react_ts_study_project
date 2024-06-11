@@ -12,7 +12,7 @@ export type Address = {
 }
 
 export type Menu = {
-    name: string
+    name: string;
     price: number;
     category: string;
 }
@@ -21,3 +21,13 @@ export type Menu = {
 export type AddressWithoutZipCode = Omit<Address, 'zipCode'>
 // Restaurant 에서 category만 가져오고 싶을 때 Pick<>
 export type RestaurantOnlyCategory = Pick<Restaurant, 'category'>
+
+// Api에서 타입스크립트 사용하기
+export type ApiResponse<T> = {
+    data: T[];
+    totalPage: number;
+    page: number;
+}
+
+export type RestaurantResponse = ApiResponse<Restaurant>
+export type MenuResponse = ApiResponse<Menu>
