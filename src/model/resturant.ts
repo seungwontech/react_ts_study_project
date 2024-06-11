@@ -17,3 +17,5 @@ export type Menu = {
     category: string;
 }
 
+// Address 에서 zipCode 빼고 싶을 때 Omit<>
+export type AddressWithoutZipCode = Omit<Address, 'zipCode'>

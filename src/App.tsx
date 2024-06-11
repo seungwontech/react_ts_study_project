@@ -28,7 +28,7 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <Store info={myRestaurant} changeAddress={changeAddress}/>
-            <BestMenu name="불고기피자" category="피자" price={1000} showBestMenuName={showBestMenuName}/>
+            <BestMenu name="불고기피자" category="피자" showBestMenuName={showBestMenuName}/>
         </div>
     );
 }
